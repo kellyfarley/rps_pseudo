@@ -1,46 +1,37 @@
-	
-#Declare a variable called best_of, set it equal to 3
-#Create a counter for player's wins, set it equal to 0
-#Create a counter for computer's wins, set it equal to 0
+best_of = 3
+player_wins = 0
+computer_wins = 0
 
-
-#While computer_score and person score are less than 3
-
-	#puts Select Rock, Paper or Scissors
-	#get person's choice, set to variable persons_choice
-
-	#get computers choice randomly from an array, set to variable computers_choice
-
-	#Start an if statement: if both choices are the same
-		#Puts draw
-	#else if computer has rock and human has paper
-		#Puts You Win
-		#add a point for human
-	#else if computer has rock and human has scissors
-		#Puts Computer Wins
-		#add a point for computer
-	#else if computer has scissors and human has rock
-		#Puts You Win
-		#add a point for human
-	#else if computer has scissors and human has paper
-		#Puts Computer Wins
-		#add a point for computer
-	#else if computer has paper and human has rock
-		#Puts Computer Wins
-		#add a point for computer
-	#else if computer has paper and human has scissors
-		#Puts You Win
-		#add a point for human
-	#else
-		#puts enter a valid option and give options
-
-
-
-#If computer score == 2
-	#Puts Computer is the best of 3!
-#Else
-	#Puts Human is best of 3!
-	
+if computer_wins < 3 and player_wins < 3
+	then puts "Select Rock, Paper or Scissors"
+	persons_choice = gets.chomp
+	computers_choice = [Rock, Paper, Scissors].shuffle
+elsif persons_choice == computers_choice
+	then puts "Draw."
+elsif computers_choice == "Rock" and persons_choice == "Paper"
+	then puts "You Win."
+	player_wins = player_wins + 1
+elsif computers_choice  == "Rock" and persons_choice == "Scissors"
+	then puts "Computer Wins."
+	computer_wins = computer_wins + 1
+elsif computers_choice == "Scissors" and persons_choice == "Rock"
+	then puts "You Win."
+	player_wins = player_wins + 1
+elsif computers_choice == "Scissors" and persons_choice == "Paper"
+	then puts "Computer Wins."
+	computer_wins = computer_wins + 1
+elsif computers_choice == "Paper" and persons_choice == "Rock"
+	then puts "Computer Wins."
+	computer_wins = computer_wins + 1
+elsif computers_choice == "Paper" and persons_choice == "Scissors"
+	then puts "You Win."
+	player_wins = player_wins + 1
+elsif
+	puts "Enter a valid option: Rock, Paper or Scissors"
+elsif computer_wins == 2
+	puts "Computer is the best of 3!"
+else
+	puts "Human is the best of 3!"
 
 
 ##BONUS##
