@@ -3,10 +3,10 @@ player_wins = 0
 computer_wins = 0
 
 if computer_wins < 3 and player_wins < 3
-	then puts "Select Rock, Paper or Scissors"
+	puts "Select Rock, Paper or Scissors"
 	persons_choice = gets.chomp
-	computers_choice = [Rock, Paper, Scissors].shuffle
-elsif persons_choice == computers_choice
+	computers_choice = ["Rock", "Paper", "Scissors"].shuffle.first
+if persons_choice == computers_choice
 	then puts "Draw."
 elsif computers_choice == "Rock" and persons_choice == "Paper"
 	then puts "You Win."
@@ -28,13 +28,14 @@ elsif computers_choice == "Paper" and persons_choice == "Scissors"
 	player_wins = player_wins + 1
 elsif
 	puts "Enter a valid option: Rock, Paper or Scissors"
-elsif computer_wins == 2
-	puts "Computer is the best of 3!"
-else
-	puts "Human is the best of 3!"
-
-
-##BONUS##
-	#If time permits
-		#Create a way to show history of choices when declaring winner of 3
+end
+if computer_wins == 2
+	then puts "Computer is the best of 3!"
+	"Final score: #{computer_wins}:#{player_wins}"
+end
+if player_wins == 2
+	then puts "Human is the best of 3!"
+	"Final score: #{computer_wins}:#{player_wins}"
+end
+end
 
