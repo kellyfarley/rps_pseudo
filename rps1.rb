@@ -1,7 +1,7 @@
-best_of = 3
+best_of = 5
 player_wins = 0
 computer_wins = 0
-while computer_wins < 2 and player_wins < 2
+while computer_wins < best_of-1 and player_wins < best_of-1
 	puts "Select Rock, Paper or Scissors"
 	persons_choice = gets.chomp.capitalize
 	computers_choice = ["Rock", "Paper", "Scissors"].shuffle.first
@@ -28,11 +28,11 @@ elsif computers_choice == "Paper" and persons_choice == "Scissors"
 elsif
 	puts "Enter a valid option: Rock, Paper or Scissors"
 end
-if computer_wins == 2
-	then puts "Computer is the best of 3! Final score: #{computer_wins}:#{player_wins}"
+if computer_wins == best_of-1
+	then puts "Computer is the best of #{best_of}! Final score: #{computer_wins}:#{player_wins}"
 end
-if player_wins == 2
-	then puts "Human is the best of 3! Final score: #{computer_wins}:#{player_wins}"
+if player_wins == best_of-1
+	then puts "Human is the best of #{best_of}! Final score: #{computer_wins}:#{player_wins}"
 end
 end
 
