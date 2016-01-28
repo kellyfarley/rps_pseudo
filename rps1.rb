@@ -1,4 +1,4 @@
-best_of = 5
+best_of = 3
 player_wins = 0
 computer_wins = 0
 while computer_wins < best_of-1 and player_wins < best_of-1
